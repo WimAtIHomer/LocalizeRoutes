@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "UploadNew";
+}
+
+<script type="text/javascript">
+$(document).ready(function(){
+    window.opener.CKEDITOR.tools.callFunction(@ViewData["CKEditorFuncNum"], '@ViewData["CKEditorUrl"]', ''); 
+    window.close();
+})
+</script>

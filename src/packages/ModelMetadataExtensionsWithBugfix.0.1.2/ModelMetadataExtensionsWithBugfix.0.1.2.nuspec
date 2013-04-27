@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ModelMetadataExtensionsWithBugfix</id>
+    <version>0.1.2</version>
+    <title>ModelMetadataExtensions</title>
+    <authors>Phil Haack</authors>
+    <owners>Phil Haack</owners>
+    <projectUrl>http://haacked.com/archive/2011/07/14/model-metadata-and-validation-localization-using-conventions.aspx</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extension to Model Metadata that provide convention based resource lookup
+bugfix: http://haacked.com/archive/2011/07/14/model-metadata-and-validation-localization-using-conventions.aspx#85157</description>
+    <summary>Extension to Model Metadata that provide convention based resource lookup</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>aspnetmvc model-metadata localization</tags>
+    <references>
+      <reference file="ModelMetadataExtensions.dll" />
+    </references>
+  </metadata>
+</package>

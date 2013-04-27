@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>@Master.Title</h1>
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li>@Html.ActionLink(Master.HomePage.ToString(), MVC.Home.Index())</li>
+                    <li>@Html.ActionLink(Master.LocalizeWebsitePage.ToString(), MVC.Admin.RouteResource.Index())</li>
+                    <li>@Html.ActionLink(Master.AboutPage.ToString(), MVC.Home.About())</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="main">
+            @RenderBody()
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

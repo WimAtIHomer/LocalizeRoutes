@@ -1,0 +1,37 @@
+﻿@model List<FileInfo>
+
+@{
+    ViewBag.Title = "Upload Page";
+}
+  
+    <form action="@Url.Content("~/Admin/RouteResource/Upload")" method="post" enctype="multipart/form-data">  
+      <label for="file">Image filename:</label><br />
+      <input type="file" name="file" id="file" /><br />
+
+      <input id="CKEditorFuncNum" name="CKEditorFuncNum" type="hidden" 
+        value="@ViewData["CKEditorFuncNum"].ToString()" />
+      <input id="CKEditor" name="CKEditor" type="hidden" 
+        value="@ViewData["CKEditor"].ToString()" />
+      <input id="langCode" name="langCode" type="hidden" 
+        value="@ViewData["langCode"].ToString()" />
+
+      <input type="submit" value="Upload" />
+    </form>
+
+    <hr />
+
+    @if (Model.Count > 0)
+    {
+        foreach (FileInfo image in Model)
+        {
+            string CKEditorUrl = @Url.Content("~/Content/UploadImages/") + image.Name;
+            string imageUrl = @Url.Content("~/Content/UploadImages/") + image.Name;
+                
+            <a title="@image.Name" href="javascript:void(0);" 
+                onclick="window.opener.CKEDITOR.tools.callFunction(@ViewData["CKEditorFuncNum"], '@CKEditorUrl', ''); 
+                    window.close();">
+                <img src="@imageUrl" border="0" 
+                    alt="@image.Name" width="50" height="50" />
+            </a>
+        }
+    } 

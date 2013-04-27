@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=152368
+  -->
+
+<configuration>
+  <connectionStrings>
+    <add name="ResourceDB" connectionString="Data Source=|DataDirectory|\ResourceDB.sdf" providerName="System.Data.SqlServerCe.4.0" />
+  </connectionStrings>
+
+  <system.web>
+    <globalization resourceProviderFactoryType="IHomer.Services.RouteResources.RouteResourceProviderFactory,IHomer.Services.RouteResources" culture="auto" uiCulture="auto"/>
+  </system.web>
+</configuration>

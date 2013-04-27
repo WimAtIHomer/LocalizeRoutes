@@ -1,0 +1,32 @@
+﻿@model System.String
+<div id="resourceEditor">
+    <div id="HtmlEdit">
+        <textarea name="CKEditor" id="CKEditor" rows="10" cols="10">
+            @Model
+        </textarea>
+    </div>
+    <div id="TextEdit">
+        <textarea name="TextEditor" id="TextEditor" rows="10" cols="90">@Model</textarea>    
+    </div>
+
+    <script type="text/javascript">
+       jQuery(document).ready( function () {
+            CKEDITOR.replace('CKEditor',
+            {
+                toolbar:
+                [
+                // Your toolbar configuration here. but make sure that
+                // 'Image' is available.
+
+                    ['JustifyLeft', 'JustifyCenter', 'JustifyRight'],
+                    ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley'],
+                    ['Styles', 'Format', 'Font', 'FontSize'],
+                ],
+                filebrowserImageBrowseUrl: home + 'Admin/RouteResource/Upload',
+                height: 350,
+                ignoreEmptyParagraph: true,
+                htmlEncodeOutput: false
+            });
+        });
+    </script> 
+</div>
